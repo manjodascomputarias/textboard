@@ -37,7 +37,7 @@
         </div>
         <div class="col-md-12 dadostopico">
           <h1><%= doc[0].assunto %></h1>
-          <p class="lead"><%= doc[0].texto %></p>
+          <pre><%= doc[0].texto %></pre>
         </div>
         <% for (var y = 0; y < doc[0].respostas.length; y++) { %>
         <div class="row resposta border rounded">
@@ -45,7 +45,7 @@
             <p class="text-right"><%= doc[0].respostas[y].dataResposta %> - <a href="#">Nº <%= doc[0]._id %></a></p>
           </div>
           <div class="col-md-12 dadostopico">
-            <p class="lead"><%= doc[0].respostas[y].resposta %></p>
+            <pre><%= doc[0].respostas[y].resposta %></pre>
           </div>
         </div>
         <% } %>
@@ -71,7 +71,7 @@
   </main>
 
   <!-- LAN Gaming JS -->
-  <script src="JS/script.js"></script>
+  <script src="js/greentext.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

@@ -1,16 +1,8 @@
-const regex = />.*/g;
-const str = $('p').text();
-let m;
+const regex = /^&gt;.*$/gm;
+const str = document.getElementsByTagName('pre');
 
-while ((m = regex.exec(str)) !== null) {
-    // This is necessary to avoid infinite loops with zero-width matches
-    if (m.index === regex.lastIndex) {
-        regex.lastIndex++;
-    }
-    
-    // The result can be accessed through the `m`-variable.
-    m.forEach((match, groupIndex) => {
-        var repl = `<span class="greentext">${match}</span>`;
-        //$('p').html( $('p').text().replace(regex, repl) );
-    });
+for (var i=0; i<str.length; i++) {
+    var inner = str[i].innerHTML;
+    var result = inner.replace(regex, '<span class="greentext">$&</span>');
+    str[i].innerHTML = result;
 }

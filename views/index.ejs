@@ -38,11 +38,7 @@
         </div>
         <div class="col-md-12 dadostopico">
           <p class="assunto"><%= doc[x].assunto %></p>
-          <p class="lead brokentext">
-            
-            <%= doc[x].texto %>
-          
-          </p>
+          <pre><%= doc[x].texto %></pre>
         </div>
         <%
         var tamanho = doc[x].respostas.length
@@ -57,14 +53,14 @@
             <p class="text-right"><%= doc[x].respostas[y].dataResposta %> - <a href="/novaresposta?id=<%= doc[x]._id%>&reply=<%= doc[x].respostas[y].resposta_id %>">Nº <%= doc[x].respostas[y].resposta_id %></a></p>
           </div>
           <div class="col-md-12 dadostopico">
-            <p class="lead brokentext"><%= doc[x].respostas[y].resposta %></p>
+            <pre><%= doc[x].respostas[y].resposta %></pre>
           </div>
         </div>
         <% } %>
 
         <div class="row fiofooter">
           <div class="col-md-12">
-              <hr class="my-4">
+              <hr>
           </div>
           <div class="col-md-6">
           </div>

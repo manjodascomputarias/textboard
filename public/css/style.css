@@ -45,3 +45,7 @@
 .greentext {
 	color: #789922;
 }
+
+pre {
+	white-space: pre-line;
+}
