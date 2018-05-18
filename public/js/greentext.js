@@ -1,5 +1,5 @@
 const regexGreentext = /^&gt;(?!&gt;).*$/gm;
-const regexReply = /^&gt;&gt;.*$/gm;
+const regexReply = /^&gt;&gt;(?!&gt;).*$/gm;
 const str = document.getElementsByTagName('pre');
 
 for (var i=0; i<str.length; i++) {
