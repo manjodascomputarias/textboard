@@ -34,7 +34,7 @@
       <% for (var x = 0; x < doc.length; x++) { %>
       <div class="row principal jumbotron jumbotron-fluid bg-light">
         <div class="col-md-12">
-          <p class="text-right"><%= doc[x].data %> - <a href="/novaresposta?id=<%= doc[x]._id %>">Nº <%= doc[x]._id %></a></p>
+          <p class="text-right">Data <%= doc[x].data %> - <a href="/novaresposta?id=<%= doc[x]._id %>">Nº <%= doc[x]._id %></a></p>
         </div>
         <div class="col-md-12 dadostopico">
           <p class="assunto"><%= doc[x].assunto %></p>
@@ -50,7 +50,7 @@
         for (var y = tamanho; y < doc[x].respostas.length; y++) {%>
         <div class="row resposta border rounded">
           <div class="col-md-12">
-            <p class="text-right"><%= doc[x].respostas[y].dataResposta %> - <a href="/novaresposta?id=<%= doc[x]._id %>&reply=<%= doc[x].respostas[y].resposta_id %>">Nº <%= doc[x].respostas[y].resposta_id %></a></p>
+            <p class="text-right">Data <%= doc[x].respostas[y].dataResposta %> - <a href="/novaresposta?id=<%= doc[x]._id %>&reply=<%= doc[x].respostas[y].resposta_id %>">Nº <%= doc[x].respostas[y].resposta_id %></a></p>
           </div>
           <div class="col-md-12 dadostopico">
             <pre><%= doc[x].respostas[y].resposta %></pre>
@@ -62,16 +62,19 @@
           <div class="col-md-12">
               <hr>
           </div>
-          <div class="col-md-6">
-          </div>
-          <div class="col-md-3">
-            <a href="/topico?id=<%= doc[x]._id%>">Ler mais</a>
-          </div>
-          <div class="col-md-3">
-            <a href="/novaresposta?id=<%= doc[x]._id%>">
-              Responder
-            </a>
-          </div>
+          <div class="col-md-3 text-center">
+              
+            </div>
+          <div class="col-md-3 text-center">
+              
+            </div>
+            
+          <div class="col-md-3 text-center">
+              <a href="/topico?id=<%= doc[x]._id%>"><button type="button" class="btn btn-secondary btn-block">Ler mais</button></a>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="/novaresposta?id=<%= doc[x]._id%>"><button type="button" class="btn btn-primary btn-block">Responder</button></a>
+            </div>
         </div>
       </div>
       <% } %>

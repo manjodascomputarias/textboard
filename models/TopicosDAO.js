@@ -37,23 +37,6 @@ TopicosDAO.prototype.carregarTopico = function(topico, callback) {
 	this._connection(dados, callback);
 };
 
-TopicosDAO.prototype.criarId = function(id) {
-	var dados = {
-		operacao: "criarId",
-		id: id,
-		collection: "config"
-	};
-	this._connection(dados);
-};
-
-TopicosDAO.prototype.carregarId = function(callback) {
-	var dados = {
-		operacao: "carregarId",
-		collection: "config"
-	};
-	this._connection(dados, callback);
-};
-
 module.exports = function() {
 	return TopicosDAO;
 };

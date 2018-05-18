@@ -9,38 +9,26 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
   <!-- LAN Gaming CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
 
   <title>Textboard</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand text-primary" href="/">Textboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link text-primary" href="/novotopico">Novo Tópico</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <main role="main" class="container">
-    <div class="row jumbotron paginaResposta bg-light">
-      <div class="col-md-12">
-        <form action="/criarid" method="POST">
-          <div class="form-group">
-              <label for="exampleInputEmail1">Nº ID</label>
-              <input type="text" id="id" name="id" class="form-control" value="<%= doc[0].ultimoId %>">
+<body class="text-center">
+        <form class="form-signin">
+          <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+          <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+          <label for="inputEmail" class="sr-only">Usuário</label>
+          <input type="user" id="inputEmail" class="form-control" placeholder="Usuário" required="" autofocus="">
+          <label for="inputPassword" class="sr-only">Senha</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Lembre-me
+            </label>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Aplicar</button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+          <p class="mt-5 mb-3 text-muted">© 2018</p>
         </form>
-      </div>
-    </div>
-  </main>
 
   <!-- LAN Gaming JS -->
   <script src="js/script.js"></script>

@@ -36,10 +36,6 @@
             <label for="exampleFormControlTextarea1">Texto</label>
             <textarea class="form-control" id="resposta" name="resposta" placeholder="Digite o Texto do Tópico" rows="5" maxlength="3000" required autofocus><% if(reply) { %>>><%= reply %><% } %></textarea>
           </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Data</label>
-              <input type="text" id="dataResposta" name="dataResposta" class="form-control" value="<%= Date(); %>" readOnly>
-          </div>
           <button type="submit" class="btn btn-primary btn-block">Responder</button>
         </form>
       </div>
