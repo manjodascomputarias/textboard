@@ -29,6 +29,12 @@ function query(db, dados, callback) {
 		case "push":
 		collection.update({_id : dados.respostas.topico_id}, { $set: { "posted" : Date.now() }, $push: { "respostas" : dados.respostas } })
 		break;
+		case "criarId":
+		collection.update({"ultimoId": dados.id}, { $set: { "ultimoId" : dados.id + 1  }});
+		break;
+		case "carregarId":
+		collection.find({}).toArray(callback);
+		break;
 		default:
 		break;
 	}

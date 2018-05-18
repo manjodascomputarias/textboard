@@ -29,49 +29,21 @@
   </nav>
 
   <main role="main" class="container">
-
-    <div class="row fio ">
-      <div class="row principal jumbotron jumbotron-fluid bg-light">
-        <div class="col-md-12">
-          <p class="text-right"><%= doc[0].data %> - <a id="<%= doc[0]._id %>" href="#">Nº <%= doc[0]._id %></a></p>
-        </div>
-        <div class="col-md-12 dadostopico">
-          <h1><%= doc[0].assunto %></h1>
-          <pre><%= doc[0].texto %></pre>
-        </div>
-        <% for (var y = 0; y < doc[0].respostas.length; y++) { %>
-        <div class="row resposta border rounded">
-          <div class="col-md-12">
-            <p class="text-right"><%= doc[0].respostas[y].dataResposta %> - <a href="#">Nº <%= doc[0].respostas[y].resposta_id %></a></p>
+    <div class="row jumbotron paginaResposta bg-light">
+      <div class="col-md-12">
+        <form action="/criarid" method="POST">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Nº ID</label>
+              <input type="text" id="id" name="id" class="form-control" value="<%= doc[0].ultimoId %>">
           </div>
-          <div class="col-md-12 dadostopico">
-            <pre><%= doc[0].respostas[y].resposta %></pre>
-          </div>
-        </div>
-        <% } %>
-
-        <div class="row fiofooter">
-          <div class="col-md-12">
-              <hr class="my-4">
-          </div>
-          <div class="col-md-6">
-          </div>
-          <div class="col-md-3">
-          </div>
-          <div class="col-md-3">
-            <a href="/novaresposta?id=<%= doc[0]._id%>">
-              Responder
-            </a>
-          </div>
-        </div>
+          <button type="submit" class="btn btn-primary btn-block">Aplicar</button>
+        </form>
       </div>
     </div>
-
-
   </main>
 
   <!-- LAN Gaming JS -->
-  <script src="js/greentext.js"></script>
+  <script src="js/script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
